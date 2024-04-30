@@ -35,20 +35,23 @@
 
             <VerticalStackLayout
                 Spacing="5"
-                Margin="5,10,5,10"
+                Margin="20,40,20,40"
                 HorizontalOptions="StartAndExpand"
                 >
 
                 <Label
-                    Text="The development of this App was a part of the [C# II] course in UEspoir April 2024."
+                    Text='The development of this App was a part of the "C# II" course in UEspoir April 2024.'
                     HorizontalOptions="StartAndExpand"
+                    Margin="0,0,0,5"
                     >
                 
                     
                 </Label>
 
                 <Label
-                    Text="This was my final project for the course and i was assigned [thesportsdb.com] API"
+                    Text='This was my final project for the course and i was assigned "thesportsdb.com" API'
+                    HorizontalOptions="StartAndExpand"
+                    Margin="0,0,0,5"
                     >
                     
                 </Label>
@@ -60,7 +63,7 @@
                 </Label>
 
                 <Button
-                    Margin="5,10,5,10"
+                    Margin="5,20,5,10"
                     Text="See GITHUB"
                     WidthRequest="200"
                     BackgroundColor="Aqua"
