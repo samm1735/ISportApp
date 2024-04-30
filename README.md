@@ -1,1 +1,3 @@
 # ISportApp
+
+### PROJECT's README WILL BE UPDATED SOON
