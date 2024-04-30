@@ -101,6 +101,7 @@
 
                             <HorizontalStackLayout Spacing="60" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                                 <Image Source="{Binding strHomeTeamBadge}"  WidthRequest="40" HeightRequest="40"/>
+                                
 
                                 <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Margin="20,0,0,0">
 
