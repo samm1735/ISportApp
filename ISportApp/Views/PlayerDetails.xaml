@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:model="clr-namespace:ISportApp.Models"
+             xmlns:vm="clr-namespace:ISportApp.ViewModels"
+             x:DataType="vm:PlayerDetailsViewModel"
+             xmlns:converters="clr-namespace:ISportApp.Converters"
+             x:Class="ISportApp.Views.PlayerDetails"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             Title="">
+
+    <ContentPage.BindingContext>
+        <vm:PlayerDetailsViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TruncateTextConverter x:Key="TruncateTextConverter"/>
+            <converters:PlayerImagesAvailableConverter x:Key="PlayerImagesAvailableConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+        <VerticalStackLayout>
+            <!--<Label 
+                Text="Player details page !"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />-->
+
+            <Label
+                Text="{Binding SelectedPlayer.strPlayer}"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center"
+                FontAttributes="Bold"
+                FontSize="40"
+                />
+
+            <ScrollView
+                Margin="20,10,20,60"
+                Orientation="Vertical"
+                >
+                <StackLayout>
+
+                    <Image
+                        Source="{Binding SelectedPlayer.strThumb}"
+                        WidthRequest="250"
+                        HeightRequest="250"
+                        Margin="0,30,0,30"
+                        />
+
+                    <Label
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Text="{Binding SelectedPlayer.strDescriptionEN}"
+                    />
+
+
+                    <VerticalStackLayout
+                        Margin="10,30,10,10"
+                        IsVisible="{Binding SelectedPlayer, Converter={StaticResource PlayerImagesAvailableConverter}}"
+                        HorizontalOptions="CenterAndExpand"
+                        Spacing="0"
+                        >
+
+                        <Label
+                            Text="{Binding SelectedPlayer.strPlayer, StringFormat='{}{0} Pictures'}"
+                            FontAttributes="Bold"
+                            FontSize="Large"
+                            HorizontalOptions="CenterAndExpand"
+                            />
+
+                        <Image
+                            Source="{Binding SelectedPlayer.strFanart1}"
+                            WidthRequest="400"
+                            HeightRequest="400"
+                            Margin="0,0,0,0"
+                            />
+
+                        <Image
+                            Source="{Binding SelectedPlayer.strFanart2}"
+                            WidthRequest="400"
+                            HeightRequest="400"
+                            Margin="0,0,0,00"
+                            />
+
+                        <Image
+                            Source="{Binding SelectedPlayer.strFanart3}"
+                            WidthRequest="400"
+                            HeightRequest="400"
+                            Margin="0,0,0,0"
+                            />
+
+                        <Image
+                            Source="{Binding SelectedPlayer.strFanart4}"
+                            WidthRequest="400"
+                            HeightRequest="400"
+                            Margin="0,0,0,0"
+                            />
+
+                    </VerticalStackLayout>
+
+                    <Button
+                        Text="Sauvegarder"
+                        HorizontalOptions="Center"
+                        Command="{Binding SauvegarderCommand}"
+                        />
+
+
+
+                    <!--<Label Text="{Binding SelectedPlayer.strDescriptionEN, Converter={StaticResource TruncateTextConverter}}" />
+                    <Button Text="Show More"
+                        Command="{Binding ShowMoreCommand}"
+                        IsVisible="{Binding SelectedPlayer.strDescriptionEN.Length, Converter={StaticResource
+                        TruncateTextConverter}}" />-->
+
+                </StackLayout>
+
+            </ScrollView>
+            
+            
+        
+        
+
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

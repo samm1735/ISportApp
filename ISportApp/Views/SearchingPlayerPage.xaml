@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ISportApp.Views.SearchingPlayerPage"
+             xmlns:vm="clr-namespace:ISportApp.ViewModels"
+             xmlns:model="clr-namespace:ISportApp.Models"
+             Title="">
+
+    <ContentPage.BindingContext>
+        <vm:SearchingPlayerViewModel/>
+    </ContentPage.BindingContext>
+
+    <VerticalStackLayout>
+        <Label 
+            Text="Search for a soccer player "
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            FontAttributes="Bold"
+            Margin="0,20,0,10"
+            />
+
+
+        <!--<StackLayout Margin="100,10,100,20" Spacing="20">
+            <Entry x:Name="SearchEntry" Placeholder="Enter search term" Text="{Binding SearchTerm}"/>
+            <Button Text="Search" Command="{Binding SearchCommand}" />
+        </StackLayout>-->
+
+        <Grid Margin="60,10,60,20"
+              ColumnSpacing="5"
+              >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="SearchEntry" Grid.Column="0" Placeholder="Enter search term" Text="{Binding SearchTerm}" Margin="0,0,10,0" />
+
+            <ImageButton Grid.Column="1" Source="search_icon.png" BackgroundColor="Transparent" Command="{Binding SearchCommand}" 
+                         HeightRequest="40" WidthRequest="40" />
+        </Grid>
+
+
+        <Border StrokeShape="RoundRectangle 10" Margin="20,10,20,10" Padding="10,30,10,30" >
+            <Border.Triggers>
+                <DataTrigger TargetType="Border" Binding="{Binding SelectedPlayer}" Value="{x:Null}">
+                    <Setter Property="IsVisible" Value="False" />
+                </DataTrigger>
+            </Border.Triggers>
+
+            <HorizontalStackLayout Spacing="10" VerticalOptions="Center">
+                <Image Source="{Binding SelectedPlayer.strCutout}" WidthRequest="70" HeightRequest="70" />
+
+                <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Margin="20,0,0,0">
+                    <Label Text="{Binding SelectedPlayer.strPlayer}" FontSize="Large" />
+
+                    <HorizontalStackLayout Spacing="1" VerticalOptions="Center">
+                        <Label Text="{Binding SelectedPlayer.strNationality}" FontSize="Body" TextColor="Aqua" FontAttributes="Bold"/>
+                        <Label Text="  " FontSize="Medium"/>
+                        <Label Text="{Binding SelectedPlayer.strTeam}" FontSize="Body"/>
+                    </HorizontalStackLayout>
+                    
+                    
+                </VerticalStackLayout>
+
+                
+
+            </HorizontalStackLayout>
+
+            <Border.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding SeePlayerDetailsCommand}" CommandParameter="{Binding SelectedPlayer}" />
+            </Border.GestureRecognizers>
+        </Border>
+
+        <Label Text="{Binding ErrorMessage}" 
+       IsVisible="{Binding IsErrorVisible}" 
+       TextColor="Red" 
+       VerticalOptions="Center" 
+       HorizontalOptions="Center" />
+
+
+
+
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
