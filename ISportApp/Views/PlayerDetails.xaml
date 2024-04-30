@@ -104,6 +104,7 @@
                         Text="Sauvegarder"
                         HorizontalOptions="Center"
                         Command="{Binding SauvegarderCommand}"
+                        BackgroundColor="Aqua"
                         />
 
 

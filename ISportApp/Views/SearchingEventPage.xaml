@@ -76,34 +76,22 @@
                             >
 
 
-
                 <CollectionView.ItemTemplate>
                     <DataTemplate>
-                        <Border StrokeShape="RoundRectangle 10" Margin="5" Padding="10" HeightRequest="100">
-                            <!--<Grid
-                                
-                                >
-                                <Grid.ColumnDefinitions>
-                                    <ColumnDefinition Width="*" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="*" />
-                                </Grid.ColumnDefinitions>
-                                
-                                
-                                
-                                <Label Text="{Binding strHomeTeam}" FontSize="Medium" Grid.Column="0" HorizontalOptions="Start" />
-                                <Label Text="{Binding strAwayTeam}" FontSize="Medium" Grid.Column="2" HorizontalOptions="End" />
-
-                                <Label Text="{Binding intHomeScore}" FontSize="Small" Grid.Column="0" HorizontalOptions="Start" VerticalOptions="Start" />
-                                <Label Text="{Binding intAwayScore}" FontSize="Small" Grid.Column="2" HorizontalOptions="End" VerticalOptions="Start" />
-                            </Grid>-->
-
-
+                        <Border StrokeShape="RoundRectangle 10" Margin="5" Padding="10" HeightRequest="150">
+                            
                             <HorizontalStackLayout Spacing="60" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                                 <Image Source="{Binding strHomeTeamBadge}"  WidthRequest="40" HeightRequest="40"/>
                                 
 
                                 <VerticalStackLayout HorizontalOptions="Center" Spacing="10" Margin="20,0,0,0">
+
+                                    <Label
+                                        Text="{Binding dateEvent}"
+                                        FontSize="Small"
+                                        >
+                                        
+                                    </Label>
 
                                     <HorizontalStackLayout Spacing="100">
 

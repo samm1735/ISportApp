@@ -26,5 +26,11 @@ namespace ISportApp.ViewModels
             await Shell.Current.GoToAsync(nameof(SearchingEventPage), true);
         }
 
+        [RelayCommand]
+        private async Task SeeAboutUsPage()
+        {
+            await Shell.Current.GoToAsync(nameof(AboutUsPage), true);
+        }
+
     }
 }

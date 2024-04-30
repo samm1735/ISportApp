@@ -14,6 +14,8 @@ namespace ISportApp
 
             Routing.RegisterRoute(nameof(PlayerDetails), typeof(PlayerDetails));
 
+            Routing.RegisterRoute(nameof(AboutUsPage), typeof(AboutUsPage));
+
 
         }
     }

@@ -41,6 +41,8 @@ namespace ISportApp
 
             builder.Services.AddSingleton<DatabaseService>();
 
+            builder.Services.AddSingleton<AboutUsPage>();
+
 
             return builder.Build();
         }

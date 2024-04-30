@@ -62,7 +62,10 @@
                          HeightRequest="200" WidthRequest="150" BackgroundColor="Transparent"
                          CornerRadius="30"
                          />
-            <ImageButton Source="about_us.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Grid.Column="1" HeightRequest="200" WidthRequest="150" BackgroundColor="Transparent"/>
+            <ImageButton Source="about_us.png" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" 
+                         Grid.Column="1" HeightRequest="200" WidthRequest="150" BackgroundColor="Transparent"
+                         Command="{Binding SeeAboutUsPageCommand}"
+                         />
         </Grid>
     </Grid>
 
