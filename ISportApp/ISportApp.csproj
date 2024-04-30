@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\me_picture_1.jpg" />
 	  <None Remove="Resources\Images\multiple_sports.png" />
 	  <None Remove="Resources\Images\search_events.png" />
 	  <None Remove="Resources\Images\search_icon.png" />

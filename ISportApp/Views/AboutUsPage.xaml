@@ -12,7 +12,7 @@
             
 
             <Image
-                Source="search_players.png"
+                Source="me_picture_1.jpg"
                 HeightRequest="200"
                 WidthRequest="200"
                 />
