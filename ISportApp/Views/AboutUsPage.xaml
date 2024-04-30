@@ -3,10 +3,73 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="ISportApp.Views.AboutUsPage"
              Title="">
-    <VerticalStackLayout Margin="5,40,5,40">
-        <Label 
-            Text="About US Page!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout Margin="5,40,5,40"
+                             HorizontalOptions="CenterAndExpand"
+                             
+                             >
+            
+            
+
+            <Image
+                Source="search_players.png"
+                HeightRequest="200"
+                WidthRequest="200"
+                />
+
+            <HorizontalStackLayout Spacing="5" Margin="5,20,5,20" HorizontalOptions="CenterAndExpand">
+
+                <Label
+                    Text="App developed by : "
+                    />
+
+                <Label
+                    Text="ISAAC"
+                    FontAttributes="Bold"
+                    />
+                <Label
+                    Text="Sammuel Ramclief"
+                    />
+
+            </HorizontalStackLayout>
+
+            <VerticalStackLayout
+                Spacing="5"
+                Margin="5,10,5,10"
+                HorizontalOptions="StartAndExpand"
+                >
+
+                <Label
+                    Text="The development of this App was a part of the [C# II] course in UEspoir April 2024."
+                    HorizontalOptions="StartAndExpand"
+                    >
+                
+                    
+                </Label>
+
+                <Label
+                    Text="This was my final project for the course and i was assigned [thesportsdb.com] API"
+                    >
+                    
+                </Label>
+
+                <Label
+                    Text="This project alongside the others source code are available on my Github"
+                    >
+                    
+                </Label>
+
+                <Button
+                    Margin="5,10,5,10"
+                    Text="See GITHUB"
+                    WidthRequest="200"
+                    BackgroundColor="Aqua"
+                    Clicked="OnGitHubButtonClicked"
+                    ></Button>
+
+            </VerticalStackLayout>
+            
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
