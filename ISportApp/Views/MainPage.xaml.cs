@@ -4,6 +4,51 @@ using Microsoft.Maui.Controls;
 using Microsoft.Maui.Graphics;
 namespace ISportApp.Views;
 
+
+
+
+/// <summary>
+/// 
+///     Nom         : ISAAC 
+///     Prenom      : Sammuel Ramclief
+///     Cours       : C# II
+///     Devoir III
+///     Description : Application mobile developpée avec .Net MAUI pour faire des requetes a un API.
+///                   Ce projet consiste a donner des informations de sport, plus précisément de Football
+///                   Le projet utilise le système de design MVVM.
+///                   
+///                   Par conséquent notre folder structure est la suivante.
+///                   
+///                   Models    |
+///                             |--> SearchedPlayer.cs    // Notre modèle pour les jouers de football
+///                             |--> SearchedEvents.cs    // Notre modèle pour les matchs de football
+///                             |--> Constants.cs   // Pour des variables constantes - Mainly used for databse integration
+///                   
+///                   
+///                   Services  |
+///                             |--> DatabaseService.cs    // Définition des méthodes de création de table, insertion et update de champs.
+///                             |--> SearchingEventService.cs  // Requetes API et retourne une instance de SearchedEvents
+///                             |--> SearchingPlayerService.cs  // Requetes API et retourne une instance de SearchedPlayer
+///                                                             
+///                   ViewModels|
+///                             |--> MainPageViewModel.cs    // Utilisée pour le Binding de Views.MainPage.
+///                             |--> PlayerDetailsViewModel.cs  // Utilisée pour le Binding de Views.PlayerDetails.
+///                             |--> SearchingEventViewModel.cs  // Utilisée pour le Binding de Views.SearchingEventPage.
+///                             |--> SearchingPlayerViewModel.cs  // Utilisée pour le Binding de Views.SearchingPlayerPage.
+///                   
+/// 
+/// 
+///                   Views     |
+///                             |--> MainPage.xaml    // La page principale
+///                             |--------> MainPage.xaml.cs //Le code behind de la page principale
+///                             |--> PlayerDetails.xaml    // La page utilisée pour les details des joueurs
+///                             |--> SearchingEventPage.xaml    // La page utilisée pour les matchs
+///                             |--> SearchingPlayerPage.xaml    // La page utilisée la recherche de jouers
+///                             
+///                             
+///                     
+/// </summary>
+
 public partial class MainPage : ContentPage
 {
 	public MainPage()
